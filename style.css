@@ -1,0 +1,263 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'poppins',sans-serif;
+    justify-content: center;
+}
+:root{
+    --pink: hsl(322, 100%, 66%);
+    --pale-cyan: hsl(193, 100%, 96%);
+    --dark-cyan: hsl(192, 100%, 9%);
+    --gray-blue: hsl(208, 11%, 55%);
+}
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    display: flex;
+    width: 100%;
+    padding: 35px 120px;
+    justify-content: space-between;
+    transition: 0.5s;
+}
+header button{
+    background: #fff;
+    color: #000;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    padding: 5px 30px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+header button:hover{
+   background: #fbfbfb;
+   color: #000;
+}
+.main{
+    min-height: 600px;
+    background: url(index_img/bg-hero-desktop.svg),var(--pale-cyan);
+}
+.main-row{
+    padding-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.col-one,
+.col-two{
+    flex-basis: 40%;
+    margin: 30px;
+}
+.col-two img{
+    max-width: 100%;
+}
+.col-one .message{
+    margin-top: 80px;
+}
+.col-one .message h1{
+    font-size: 38px;
+    font-weight: 800;
+    width: 82%;
+    margin: auto;
+    padding: 5px;
+    padding-bottom: 30px;
+}
+.col-one .message .span{
+    width: 82%;
+    margin: auto;
+    padding: 5px;
+    padding-bottom: 30px;
+}
+button{
+    background-color: var(--pink);
+    border: none;
+    padding: 15px 80px;
+    color: #fff;
+    border-radius: 25px;
+    margin-left: 50px;
+    font-size: 18px;
+    cursor: pointer;
+}
+button:hover{
+    opacity: 0.8;
+}
+.content-container{
+    border: #eee solid 1px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    margin:auto;
+    width: 90%;
+    margin-bottom: 50px;
+}
+#content{
+    margin-top: 100px;
+}
+.content-row{
+    display: flex;
+}
+.content-col-two,
+.content-col-one{
+    flex-basis: 50%;
+    margin: 10px;
+}
+.content-col-two img{
+    max-width: 100%;
+}
+.content-end{
+    padding-bottom: 30px;
+}
+.content-message{
+    position: relative;
+    max-width: 70%;
+    margin: auto;
+    padding-top: 150px;
+}
+.content-message h2{
+    color: var(--dark-cyan);
+    padding-bottom: 10px;
+}
+.content-message p{
+    color: var(--gray-blue);
+}
+.button-container{
+    position: relative;
+    background-color: #fff;
+    height: 200px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    width: 40%;
+    left: 30%;
+    top: 70px;
+    border-radius: 10px;
+}
+.button-container h1{
+    text-align: center;
+    padding: 40px;
+}
+.button-container .button{
+    justify-content: center;
+    max-width: 55%;
+    margin: auto;
+}
+.button-container button{
+    margin: auto;
+}
+footer{
+    background-color: var(--dark-cyan);
+    min-height: 600px;
+    width: 100%;
+    color: #fff;
+}
+.footer-header{
+    padding: 50px 70px;
+}
+.footer-main{
+    margin-top: 50px;
+    margin: auto;
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 100px;
+}
+.footer-footer{
+    text-align: right;
+    padding: 50px 50px ;
+}
+.footer-main .col{
+    max-width: 300px;
+    padding: 10px;
+}
+.footer-main .col .icon-col{
+    padding: 10px;
+}
+.footer-header img{
+    filter: brightness(0) invert(1);
+}
+.scrollButton{
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    width: 35px;
+    height: 35px;
+    background: var(--gray-blue) url(index_img/up-arrow.png);
+    border-radius: 3px;
+    background-size: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    z-index: 100000;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+.scrollButton.active{
+    visibility: visible;
+    opacity: 1;
+}
+.fa-2x{
+    color: transparent;
+}
+.fa-stack{
+    border: solid 1px white;
+    border-radius: 100px;
+}
+@media (max-width:986px) {
+    .footer-header{
+        margin-top: 150px;
+    }
+}
+@media (max-width:700px) {
+    header{
+        padding: 10px;
+    }
+    footer,
+    .footer-main{
+        display: block;
+        margin: 0;
+        padding: 10px;
+    }
+}
+@media (max-width:460px) {
+    header{
+        padding-top: 30px;
+    }
+    header img{
+        width: 100px;
+        height: 50px;
+    }
+    button{
+        margin-left: 0px;
+    }
+    .main{
+        min-height: 600px;
+        background: url(index_img/bg-hero-mobile.svg),var(--pale-cyan);
+    }
+    .content-message{
+        margin: 0;
+    }
+    .button-container .button{
+        position: relative;
+        bottom: 50px;
+        border: solid;
+    }
+}
+@media (max-width:986px){
+    .button-container{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        position: static;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .button-container .button{
+        margin: auto;
+    }
+    .button-container button{
+        margin: auto;
+    }
+}

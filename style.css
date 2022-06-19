@@ -241,7 +241,6 @@ footer{
     .button-container .button{
         position: relative;
         bottom: 50px;
-        border: solid;
     }
 }
 @media (max-width:986px){
